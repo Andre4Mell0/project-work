@@ -52,10 +52,10 @@ https://releases.ubuntu.com/jammy/
 #### Step 1: 
 
 Prima di procedere all'installazione dei vari componenti dobbiamo essere sicuri che tutti i pacchetti siano aggiornati
-`
+```
 sudo apt update
 sudo apt upgrade
-`
+```
 
 
 
