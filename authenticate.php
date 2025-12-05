@@ -30,14 +30,16 @@ $result = $stmt->get_result();
 
 // 5. Check if user exists
 if ($result->num_rows === 0) {
-    die("User not found.");
+    header("Location: login.php?error=invalid");
+    exit;
 }
 
 $user = $result->fetch_assoc();
 
 // 6. Verify the hashed password
 if (!password_verify($password, $user["password"])) {
-    die("Incorrect password.");
+    header("Location: login.php?error=invalid");
+    exit;
 }
 
 // 7. If OK → store user info in session
